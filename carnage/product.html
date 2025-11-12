@@ -4,14 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Products - Carnage</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preload" href="style.css" as="style">
+  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+
+  <link rel="preload" as="image" href="img/discount.jpg" fetchpriority="high" />
 </head>
-<body>
+
+<body class="product">
   <header>
     <div class="container">
       <div class="bar">
         <div class="logo">
-          <img src="img/Carnage_logo.webp" alt="Carnage Logo" />
+          <img src="img/logo.webp" alt="Carnage Logo" width="160" height="48" loading="lazy" decoding="async">
         </div>
         <nav class="nav" aria-label="Main">
           <a href="home.html">Home</a>
@@ -23,41 +29,46 @@
   </header>
 
   <main>
-    <div class="container">
+    <div class="container products-main">
       <h1>Carnage Products</h1>
-      <div class="products-grid">
-        <section class="product-card">
-          <img src="img/discount.webp" alt="Carnage Discount Hoodie" style="width:100%; border-radius:6px;">
-          <h2>Carnage Discount Hoodie</h2>
-          <p>Stylish and cozy hoodie on discount! Perfect for everyday wear or post-workout comfort.</p>
+
+      <section class="products-grid" aria-label="Product list">
+        <article class="product-card">
+          <img src="img/discount.jpg" alt="Carnage Discount Hoodie" class="product-img"
+               width="800" height="600" loading="eager" fetchpriority="high" decoding="async">
+          <h2 class="product-title">Carnage Discount Hoodie</h2>
+          <p class="product-desc">Stylish and cozy hoodie on discount! Perfect for everyday wear or post-workout comfort.</p>
           <p class="price">€39.99</p>
-          <button type="button" class="btn-buy">Buy</button>
-        </section>
+          <button class="btn-buy" type="button">Buy</button>
+        </article>
 
-        <section class="product-card">
-          <img src="img/men's seamless.png" alt="Men's Seamless Gym Shirt" style="width:100%; border-radius:6px;">
-          <h2>Men's Seamless Gym Shirt</h2>
-          <p>Lightweight and stretchable gym shirt built for performance, flexibility, and durability.</p>
+        <article class="product-card">
+          <img src="img/men.jpg" alt="Men's Seamless Gym Shirt" class="product-img"
+               width="800" height="600" loading="lazy" decoding="async" fetchpriority="low">
+          <h2 class="product-title">Men's Seamless Gym Shirt</h2>
+          <p class="product-desc">Lightweight and stretchable gym shirt built for performance, flexibility, and durability.</p>
           <p class="price">€29.99</p>
-          <button type="button" class="btn-buy">Buy</button>
-        </section>
+          <button class="btn-buy" type="button">Buy</button>
+        </article>
 
-        <section class="product-card">
-          <img src="img/bordeaux woman slim fit camsiole u collar tank top.webp" alt="Bordeaux Woman Slim Fit Camisole" style="width:100%; border-radius:6px;">
-          <h2>Bordeaux Woman Slim Fit Camisole</h2>
-          <p>Soft slim-fit camisole with U-collar. Ideal for daily casual outfits and layering comfort.</p>
+        <article class="product-card">
+          <img src="img/woman.webp" alt="Bordeaux Woman Slim Fit Camisole" class="product-img"
+               width="800" height="600" loading="lazy" decoding="async" fetchpriority="low">
+          <h2 class="product-title">Bordeaux Woman Slim Fit Camisole</h2>
+          <p class="product-desc">Soft slim-fit camisole with U-collar. Ideal for daily casual outfits and layering comfort.</p>
           <p class="price">€24.99</p>
-          <button type="button" class="btn-buy">Buy</button>
-        </section>
+          <button class="btn-buy" type="button">Buy</button>
+        </article>
 
-        <section class="product-card">
-          <img src="img/unisex carnage t-shirt.png" alt="Unisex Carnage T-shirt" style="width:100%; border-radius:6px;">
-          <h2>Unisex Carnage T-shirt</h2>
-          <p>Breathable and durable t-shirt made for everyone — comfortable both in and out of the gym.</p>
+        <article class="product-card">
+          <img src="img/unisex.jpg" alt="Unisex Carnage T-shirt" class="product-img"
+               width="800" height="600" loading="lazy" decoding="async" fetchpriority="low">
+          <h2 class="product-title">Unisex Carnage T-shirt</h2>
+          <p class="product-desc">Breathable and durable t-shirt made for everyone — comfortable both in and out of the gym.</p>
           <p class="price">€19.99</p>
-          <button type="button" class="btn-buy">Buy</button>
-        </section>
-      </div>
+          <button class="btn-buy" type="button">Buy</button>
+        </article>
+      </section>
     </div>
   </main>
 

@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Carnage</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div class="container">
       <div class="bar">
         <div class="logo">
-          <img src="img/Carnage_logo.webp" alt="Carnage Logo" />
+          <img src="img/logo.webp" alt="Carnage Logo" width="120" height="36" loading="lazy" decoding="async">
         </div>
         <nav class="nav" aria-label="Main">
           <a href="home.html">Home</a>
@@ -27,7 +30,6 @@
       <h1>Contact us</h1>
 
       <div class="contact-grid">
-        <!-- Left: Contact details -->
         <section class="contact-card">
           <h2>Get in Touch</h2>
           <div class="contact-info">
@@ -35,12 +37,10 @@
               <strong>Email</strong>
               <a href="mailto:rading@metropolia.fi">rading@metropolia.fi</a>
             </p>
-
             <p>
               <strong>Phone</strong>
               <a href="tel:+358449512524">+358 44 9512524</a>
             </p>
-
             <p>
               <strong>Address</strong>
               Kilo, Espoo, Finland
@@ -48,14 +48,9 @@
           </div>
         </section>
 
-        <!-- Right: Map -->
-        <section class="map-container">
-          <iframe
-            title="Map: Kilo, Espoo, Finland"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=24.75%2C60.20%2C24.78%2C60.23&layer=mapnik"
-            loading="lazy">
-          </iframe>
-        </section>
+        <div class="map-container">
+          <iframe title="Map: Kilo, Espoo, Finland" src="https://www.openstreetmap.org/export/embed.html?bbox=24.75%2C60.20%2C24.78%2C60.23&layer=mapnik" loading="lazy"></iframe>
+        </div>
       </div>
     </div>
   </main>

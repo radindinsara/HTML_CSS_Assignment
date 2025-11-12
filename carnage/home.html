@@ -4,14 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home - Carnage</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preload" href="style.css" as="style">
+  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+
+  <link rel="preload" as="image" href="img/unisex.jpg" fetchpriority="high" />
 </head>
-<body>
+<body class="home">
   <header>
     <div class="container">
       <div class="bar">
         <div class="logo">
-          <img src="img/Carnage_logo.webp" alt="Carnage Logo" />
+          <img src="img/logo.webp" alt="Carnage Logo" width="160" height="48" loading="lazy" decoding="async">
         </div>
         <nav class="nav" aria-label="Main">
           <a href="home.html" aria-current="page">Home</a>
@@ -25,12 +30,26 @@
   <main>
     <div class="container">
       <h1>Carnage</h1>
-      <img src="img/unisex carnage t-shirt.png" alt="Carnage sport clothing" class="home-hero-image" />
-      <p class="home-description">
-        Carnage designs reliable, comfortable sport clothing for everyday training and performance.
-        Our apparel focuses on breathable fabrics, durable construction, and a clean, distraction-free
-        fit so you can move confidently at the gym, on the track, or during recovery.
-      </p>
+
+      <picture>
+        <img
+          src="img/unisex.jpg"
+          alt="Carnage sport clothing"
+          class="home-hero-image"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+          width="1200"
+          height="675">
+      </picture>
+
+      <div class="home-description-box">
+        <p class="home-description">
+          Carnage designs reliable, comfortable sport clothing for everyday training and performance.
+          Our apparel focuses on breathable fabrics, durable construction, and a clean, distraction-free
+          fit so you can move confidently at the gym, on the track, or during recovery.
+        </p>
+      </div>
     </div>
   </main>
 
